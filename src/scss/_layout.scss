@@ -2,16 +2,21 @@
 
 body{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 
     background-color: var(--fourth-color);
 }
 
 main{
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-
     padding: 5em 1.5em 5em 1.5em;
+    @include desktop{
+        display: flex;
+        width: 64%;
+        width: clamp(854px, 64%, 100%);
+
+        padding: 0;
+        // FIXME:
+    }
 }

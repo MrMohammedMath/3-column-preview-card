@@ -11,7 +11,11 @@
         background-color: var(--first-color);
         border-radius: var(--radius) var(--radius) 0 0;
 
-        @include part(btn){
+        @include desktop {
+            border-radius: var(--radius) 0 0 var(--radius);
+        }
+
+        @include part(btn) {
             color: var(--first-color);
         }
     }
@@ -20,7 +24,7 @@
         background-color: var(--second-color);
         border-radius: 0;
 
-        @include part(btn){
+        @include part(btn) {
             color: var(--second-color);
         }
     }
@@ -29,7 +33,11 @@
         background-color: var(--third-color);
         border-radius: 0 0 var(--radius) var(--radius);
 
-        @include part(btn){
+        @include desktop {
+            border-radius: 0 var(--radius) var(--radius) 0;
+        }
+
+        @include part(btn) {
             color: var(--third-color);
         }
     }
