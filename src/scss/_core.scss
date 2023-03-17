@@ -1,1 +1,32 @@
 //  contains variables, resets, mixins, and other similar styles
+
+:root {
+    --first-color: hsl(31, 77%, 52%);
+    --second-color: hsl(184, 100%, 22%);
+    --third-color: hsl(179, 100%, 13%);
+
+
+    --fifth-color: hsla(0, 0%, 100%, 0.75); // paragraphs
+    --fourth-color: hsl(0, 0%, 95%); // background, headings, buttons
+
+    color: black;
+
+    --primary-font-family: 'Big Shoulders Display', cursive; // 700
+    --secondary-font-family: 'Lexend Deca', sans-serif; // 400
+
+    --radius: 0.5em;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    // border: 1px red solid;
+}
+
+@mixin desktop {
+    @media screen and (min-width: 48em) {
+        @content;
+    }
+}

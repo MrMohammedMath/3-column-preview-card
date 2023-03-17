@@ -1,6 +1,36 @@
 //  imports
-@import 'components';
+@import '~csstyle/csstyle';
 @import 'core';
+@import 'components/card';
 @import 'layout';
 
 // for more info about scss file structure visit https://www.webdesignerdepot.com/2020/12/2-smartest-ways-to-structure-sass/
+
+@include component(card) {
+    &:nth-of-type(1n) {
+        background-color: var(--first-color);
+        border-radius: var(--radius) var(--radius) 0 0;
+
+        @include part(btn){
+            color: var(--first-color);
+        }
+    }
+
+    &:nth-of-type(2n) {
+        background-color: var(--second-color);
+        border-radius: 0;
+
+        @include part(btn){
+            color: var(--second-color);
+        }
+    }
+
+    &:nth-of-type(3n) {
+        background-color: var(--third-color);
+        border-radius: 0 0 var(--radius) var(--radius);
+
+        @include part(btn){
+            color: var(--third-color);
+        }
+    }
+}
